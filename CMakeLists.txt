@@ -19,6 +19,7 @@ install(
 install(
   PROGRAMS
   launch/robot_description_publisher.py
+  scripts/manual_control.py
   DESTINATION lib/${PROJECT_NAME}
   )
 
