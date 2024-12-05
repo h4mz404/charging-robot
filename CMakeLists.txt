@@ -20,6 +20,8 @@ install(
   PROGRAMS
   launch/robot_description_publisher.py
   scripts/manual_control.py
+  scripts/inverse_kinematics.py
+  scripts/jointPos_pub.py
   DESTINATION lib/${PROJECT_NAME}
   )
 

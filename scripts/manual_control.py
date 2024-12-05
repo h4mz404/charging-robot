@@ -143,7 +143,8 @@ class KeyboardControlNode(Node):
 
                 joint_velocities.data = [jointVel[0], jointVel[1], jointVel[2], jointVel[3], jointVel[4], jointVel[5], jointVel[6]]
                 joint_positions.data = [jointPos[0], jointPos[1], jointPos[2], jointPos[3], jointPos[4], jointPos[5], jointPos[6]]
-    
+                # joint_positions.data = [0.000844252177463066, -0.0011798753289712196, -0.0005102505266050095, -2.7755575615628914e-20, 0.0005354799773980396, 0.0003103937007151231, 0.0]
+
 
                 # wheel_velocities.data = [linear_vel, linear_vel, -linear_vel]
                 # joint_positions.data = [steer_angle,steer_angle]
