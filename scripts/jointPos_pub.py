@@ -5,6 +5,8 @@ from geometry_msgs.msg import Twist
 from std_msgs.msg import Float64MultiArray
 from sensor_msgs.msg import JointState
 import time
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D 
 from scipy.spatial.transform import Rotation as R
 from inverse_kinematics import *
 
@@ -84,6 +86,16 @@ class jointPosPubNode(Node):
 
         if self.iter == 0:
             # TODO Plot the trajectory
+        
+
+            fig = plt.figure()
+            ax = fig.add_subplot(111, projection='3d')
+            ax.plot(xArray, yArray, zArray, label='Trajectory')
+            ax.set_xlabel('X')
+            ax.set_ylabel('Y')
+            ax.set_zlabel('Z')
+            ax.legend()
+            plt.show()
         
             print("Trajectory Generated")
             self.trajectory = trajectory
