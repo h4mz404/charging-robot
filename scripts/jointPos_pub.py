@@ -39,16 +39,18 @@ class jointPosPubNode(Node):
         #Get the goal position
         self.getGoalPos()
         #TODO change if goal orientation is different from current orientation
-        self.currentOrientation = np.array([0.0, 0.0, 0.0]).astype(np.float64)
+        # self.currentOrientation = np.array([0.0, 0.0, 0.0]).astype(np.float64)
         self.goalOrientation = self.currentOrientation
         self.get_logger().info(f'Goal Position: {self.goalPos}')
+        self.get_logger().info(f'Goal Orientation: {self.goalOrientation}')
         #Get the trajectory
         self.getTrajectory()
 
 
     def getGoalPos(self):
         #Start position 0.347550000000000 0 0.694150000000000]
-        self.goalPos = np.array([0.5, 0.0001, 0.60]).astype(np.float64)
+        #0.347550000000000 0.243650000000000 0.450500000000000
+        self.goalPos = np.array([0.34755, 0.01, 0.40]).astype(np.float64)
         self.moveFlag = True
 
     def getTrajectory(self):
@@ -152,7 +154,7 @@ class jointPosPubNode(Node):
                 self.moveFlag = False
         #Stop the robot
         q_matrix = [float(q) for q in q_matrix]
-        joint_positions.data = [q_matrix[0], q_matrix[1], q_matrix[2], q_matrix[3], q_matrix[4], q_matrix[5], 0.2]
+        joint_positions.data = [q_matrix[0], q_matrix[1], q_matrix[2], q_matrix[3], q_matrix[4], q_matrix[5], 0.5]
         self.joint_position_pub.publish(joint_positions)
         self.get_logger().info(f'Joint Angles: {joint_positions.data}')
         self.get_logger().info(f'Goal position reached: {self.currentPos}')

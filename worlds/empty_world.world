@@ -14,6 +14,10 @@
       <shadows>false</shadows>
     </scene>
 
+  <include> 
+      <uri>model://autocar</uri>
+    </include>
+  
     <gui fullscreen='0'>
       <camera name='user_camera'>
         <pose frame=''>0.319654 -0.235002 9.29441 0 1.5138 0.009599</pose>
@@ -42,6 +46,85 @@
         </constraints>
       </ode>
     </physics>
+
+
+    <state world_name='default'>
+    <sim_time>306 193000000</sim_time>
+    <real_time>313 921362636</real_time>
+    <wall_time>1733714863 328392747</wall_time>
+    <iterations>306193</iterations>
+    <model name='autocar'>
+      <pose>1.79945 -0.809627 0.009913 -0.00713 1e-06 -1.51577</pose>
+      <scale>1 1 1</scale>
+      <link name='base_link'>
+        <pose>1.79945 -0.809627 0.009913 -0.00713 1e-06 -1.51577</pose>
+        <velocity>0.001111 0.000362 -0.005489 0.000459 -0.003089 0.000266</velocity>
+        <acceleration>3.27314 0.133262 -1.97767 0.257236 1.1324 0.024964</acceleration>
+        <wrench>3.27314 0.133262 -1.97767 0 -0 0</wrench>
+      </link>
+      <link name='bl_1'>
+        <pose>0.741558 0.008433 0.342435 0.381038 -2e-06 -1.51577</pose>
+        <velocity>-0.000628 -0.000516 -0.064657 0.001724 -0.003101 0.000297</velocity>
+        <acceleration>0.713407 -0.342825 -74.6892 2.15616 0.529367 0.086178</acceleration>
+        <wrench>17.4785 -8.39922 -1829.89 0 -0 0</wrench>
+      </link>
+      <link name='br_1'>
+        <pose>0.837803 -1.73892 0.342435 0.561906 -2e-06 -1.51577</pose>
+        <velocity>-0.000164 -0.000479 -0.065217 0.001693 -0.003082 0.000288</velocity>
+        <acceleration>0.786206 -0.351207 -75.23 2.30672 -0.108228 0.069561</acceleration>
+        <wrench>19.262 -8.60458 -1843.13 0 -0 0</wrench>
+      </link>
+      <link name='chassis_link'>
+        <pose>1.79945 -0.809627 0.009914 -0.00713 1e-06 -1.51577</pose>
+        <velocity>0.001154 0.000365 -0.005557 0.000465 -0.003156 0.000266</velocity>
+        <acceleration>-0.079084 -0.032759 -1.61455 0.981969 -1.12858 -0.152733</acceleration>
+        <wrench>-124.952 -51.7594 -2551 0 -0 0</wrench>
+      </link>
+      <link name='fl_1'>
+        <pose>3.2685 0.147624 0.324583 -0.475972 2e-06 -1.51261</pose>
+        <velocity>-0.002259 -0.000488 0.010322 0.001503 -0.006962 4.5e-05</velocity>
+        <acceleration>-0.955915 0.525313 81.0074 0.332059 0.977206 2.73677</acceleration>
+        <wrench>-23.4199 12.8702 1984.68 0 -0 0</wrench>
+      </link>
+      <link name='fr_1'>
+        <pose>3.36484 -1.59974 0.324583 -0.476029 -0 -1.51699</pose>
+        <velocity>0.002972 0.00032 0.010313 -0.000986 0.009157 1.8e-05</velocity>
+        <acceleration>1.46878 -1.24126 81.7917 -2.98747 -0.581251 2.73112</acceleration>
+        <wrench>35.985 -30.4109 2003.9 0 -0 0</wrench>
+      </link>
+      <link name='l_steer_1'>
+        <pose>3.27141 0.097706 0.324332 -0.007131 2e-05 -1.51261</pose>
+        <velocity>-0.001347 -4.8e-05 0.004721 0.000974 -0.002673 0.000214</velocity>
+        <acceleration>0.491209 0.529154 43.1328 1.81454 1.15579 3.1036</acceleration>
+        <wrench>0.491209 0.529154 43.1328 0 -0 0</wrench>
+      </link>
+      <link name='r_steer_1'>
+        <pose>3.36215 -1.54981 0.324332 -0.007131 -1.1e-05 -1.51698</pose>
+        <velocity>0.001928 0.000489 0.004526 -8.9e-05 -0.002585 0.000182</velocity>
+        <acceleration>1.0529 -0.691513 43.3862 2.51031 1.15717 3.0871</acceleration>
+        <wrench>1.0529 -0.691513 43.3862 0 -0 0</wrench>
+      </link>
+      <link name='steering_wheel'>
+        <pose>1.79945 -0.809627 0.009913 -0.015801 3.5e-05 -1.51338</pose>
+        <velocity>0.001114 0.00036 -0.005497 0.000305 -0.000274 0.001044</velocity>
+        <acceleration>3.27572 0.132348 -1.97601 0.005318 -0.369763 1.34332</acceleration>
+        <wrench>3.27572 0.132348 -1.97601 0 -0 0</wrench>
+      </link>
+    </model>
+    <model name='ground_plane'>
+      <pose>0 0 0 0 -0 0</pose>
+      <scale>1 1 1</scale>
+      <link name='link'>
+        <pose>0 0 0 0 -0 0</pose>
+        <velocity>0 0 0 0 -0 0</velocity>
+        <acceleration>0 0 0 0 -0 0</acceleration>
+        <wrench>0 0 0 0 -0 0</wrench>
+      </link>
+    </model>
+    <light name='sun'>
+      <pose>0 0 10 0 -0 0</pose>
+    </light>
+  </state>
 
   </world>
 </sdf>

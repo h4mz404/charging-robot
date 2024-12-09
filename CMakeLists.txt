@@ -8,6 +8,7 @@ launch
 worlds
 config
 scripts
+models
 DESTINATION share/${PROJECT_NAME}/
 )
 
